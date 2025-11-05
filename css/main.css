@@ -6,17 +6,18 @@
   display: flex;
 }
 #main-warpper {
+  display: flex;
   overflow: hidden;
 }
 
 #main-prev {
   position: absolute;
-  margin-top: 410px;
+  margin-top: 360px;
   margin-left: 5%;
 }
 #main-next {
   position: absolute;
-  margin-top: 410px;
+  margin-top: 360px;
   margin-left: 95%;
 }
 

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/footer.css" />
+    
   </head>
   <body>
     <header>
@@ -124,23 +125,23 @@
       </div>
     </header>
     <main id="main-contianer">
+      <div id="carousel-warpper">
+        <img
+        src="https://www.gimhae.go.kr/_res/tour/img/main/vpr1/v20250103_01.jpg"
+        alt=""
+        />
+        <img
+        src="https://www.gimhae.go.kr/_res/tour/img/main/vpr1/v20250103_02.jpg"
+        alt=""
+        />
+        <img
+        src="https://www.gimhae.go.kr/_res/tour/img/main/vpr1/v20250103_03.jpg"
+        alt=""
+        />
+      </div>
+      <img id="main-prev" src="https://nextit.or.kr:48080/images/prev-btn.png" onclick="mainPrev()"></img>
+      <img id="main-next" src="https://nextit.or.kr:48080/images/next-btn.png" onclick="mainNext()"></img>
       <div id="main-warpper">
-        <button id="main-prev"></button>
-        <button id="main-next"></button>
-        <div id="carousel-warpper">
-          <img
-            src="https://www.gimhae.go.kr/_res/tour/img/main/vpr1/v20250103_01.jpg"
-            alt=""
-          />
-          <img
-            src="https://www.gimhae.go.kr/_res/tour/img/main/vpr1/v20250103_02.jpg"
-            alt=""
-          />
-          <img
-            src="https://www.gimhae.go.kr/_res/tour/img/main/vpr1/v20250103_03.jpg"
-            alt=""
-          />
-        </div>
       </div>
       <div id="food-intro">
         <div class="food-page"></div>
@@ -198,5 +199,6 @@
         </p>
       </div>
     </footer>
+    <script src="js/carousel.js"></script>
   </body>
 </html>
