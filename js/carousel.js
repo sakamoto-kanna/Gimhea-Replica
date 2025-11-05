@@ -1,6 +1,7 @@
 const warpperImage = 1920;
 let mainIdx = 0;
 let mainCountIdx = 3;
+
 function carousel(step) {
   const main = document.getElementById("carousel-warpper");
   main.style.transform = `translate3d(-${warpperImage * step}px,0,0)`;
@@ -19,3 +20,7 @@ function mainNext() {
   mainIdx++;
   carousel(mainIdx);
 }
+
+const mainCycle = () => {
+  setInterval(mainNext, 5000);
+};

@@ -4,6 +4,7 @@
 
 #carousel-warpper {
   display: flex;
+  transition: transform 0.8s ease;
 }
 #main-warpper {
   display: flex;
