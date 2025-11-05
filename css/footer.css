@@ -1,0 +1,60 @@
+.footer {
+  color: #fff;
+  font-size: 14px;
+  padding: 0px 0px 40px 0px;
+  position: relative;
+  background-color: #23262d;
+}
+.footer-memu {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  background-color: white;
+}
+.footer-memu a {
+  color: #23262d;
+  text-decoration: none;
+  font-size: 13px;
+  padding: 5px 0;
+  transition: color 0.3s;
+  font-size: large;
+}
+.footer-menu a:hover {
+  color: #0a6eff;
+}
+
+.footer-dropdowns {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  background-color: #23262d;
+  border-bottom: 1px solid #444;
+}
+
+.footer-dropdowns select {
+  padding: 8px 12px;
+  background: #23262d;
+  color: #fff;
+  border: 1px solid #444;
+  cursor: pointer;
+  outline: none;
+  display: inline-block;
+  width: 220px;
+  height: 50px;
+}
+
+.footer-info-area {
+  margin: 0 auto;
+  text-align: center;
+  background-color: #23262d;
+}
+
+.footer-info-area .links a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 15px;
+  font-weight: bold;
+}

@@ -4,6 +4,199 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>김해시 래플리카</title>
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/footer.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div id="head-memu">
+        <ul id="familyList">
+          <li><a href="#">시정포털</a></li>
+          <li><a href="#" id="selected">관광포털</a></li>
+          <li><a href="#">분야포털</a></li>
+          <li><a href="#">공공예약포털</a></li>
+          <li><a href="#">주민자치포털</a></li>
+          <li><a href="#">기업119</a></li>
+          <li><a href="#">일자리지원센터</a></li>
+          <li><a href="#">김해시의회</a></li>
+          <li><a href="#">공공데이터</a></li>
+          <li><a href="#">스마트도시</a></li>
+          <li><a href="#">교통정보</a></li>
+          <li><a href="#">국가상징</a></li>
+          <li><a href="#">|</a></li>
+          <li><a href="#">홈</a></li>
+          <li><a href="#">누리집안내</a></li>
+        </ul>
+      </div>
+      <div id="middle-head">
+        <a href="index.html"
+          ><img
+            src="https://www.gimhae.go.kr/_res/tour/img/inc/logo@2x_2025.png"
+            alt="홈으로 이동"
+        /></a>
+        <div id="search-bar">
+          <select name="select-search" id="select-search">
+            <option value="통합검색">통합검색</option>
+            <option value="여행지">여행지</option>
+            <option value="음식">음식</option>
+          </select>
+          <input id="input-search" type="text" placeholder="검색어" />
+          <button
+            style="
+              border: none;
+              background-color: rgb(1, 88, 185);
+              height: 100%;
+            "
+          >
+            <img
+              src="https://www.gimhae.go.kr/_res/tour/img/inc/ic80a3c0search1@2x.png"
+              alt=""
+              height="110%"
+            />
+          </button>
+        </div>
+        <select
+          name="kind"
+          id="kind"
+          style="
+            height: 40px;
+            margin: 16px;
+            border: 4px;
+            border-style: solid;
+            border-color: rgb(1, 88, 185);
+          "
+        >
+          <option>여행자 맞춤 검색</option>
+        </select>
+        <div id="hrefImage">
+          <a href="http://blog.naver.com/ghhamohamo"
+            ><img
+              class="hrefImage"
+              src="https://www.gimhae.go.kr/_res/tour/img/inc/bn1blog01@3x.png"
+              alt=""
+          /></a>
+          <a href="https://www.facebook.com/romanticgimhae/"
+            ><img
+              class="hrefImage"
+              src="https://www.gimhae.go.kr/_res/tour/img/inc/bn1facebook@3x.png"
+              alt=""
+          /></a>
+          <a href="https://story.kakao.com/ch/gimhae"
+            ><img
+              class="hrefImage"
+              src="https://www.gimhae.go.kr/_res/tour/img/inc/bn1kakaostory@3x.png"
+              alt=""
+          /></a>
+          <a href="https://www.instagram.com/gimhae_tour/"
+            ><img
+              class="hrefImage"
+              src="https://www.gimhae.go.kr/_res/tour/img/inc/snslink2instagram.png"
+              alt=""
+          /></a>
+          <a href="https://festa.gyeongnam.go.kr/"
+            ><img
+              src="https://www.gimhae.go.kr/_res/tour/img/main/festival_02.png"
+              alt=""
+              style="position: absolute; margin-top: -10px; margin-left: 10px"
+          /></a>
+        </div>
+      </div>
+      <div id="bottom-head">
+        <ul id="bottom-left-memu">
+          <li><a href="#">소개</a></li>
+          <li><a href="#">축제</a></li>
+          <li><a href="#">여행지</a></li>
+          <li><a href="#">문화유산</a></li>
+          <li><a href="#">음식</a></li>
+          <li><a href="#">숙박</a></li>
+          <li>
+            <a href="#" style="font-size: 16px; font-weight: bold">☰</a>
+          </li>
+        </ul>
+        <ul id="bottom-right-memu">
+          <li><a href="#">관광지도</a></li>
+          <li><a href="#">주변대중교통</a></li>
+          <li><a href="#">정보센터</a></li>
+          <li><a href="#">사이트맵</a></li>
+          <li><a href="#" style="color: orange">스마트관광</a></li>
+        </ul>
+      </div>
+    </header>
+    <main id="main-contianer">
+      <div id="main-warpper">
+        <button id="main-prev"></button>
+        <button id="main-next"></button>
+        <div id="carousel-warpper">
+          <img
+            src="https://www.gimhae.go.kr/_res/tour/img/main/vpr1/v20250103_01.jpg"
+            alt=""
+          />
+          <img
+            src="https://www.gimhae.go.kr/_res/tour/img/main/vpr1/v20250103_02.jpg"
+            alt=""
+          />
+          <img
+            src="https://www.gimhae.go.kr/_res/tour/img/main/vpr1/v20250103_03.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div id="food-intro">
+        <div class="food-page"></div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-memu">
+        <a href="#">정책정보 모음</a>
+        <a href="#">삶의 질을 추구하는 국제슬로시티 김해</a>
+        <a href="#">유니세프 아동친화도시</a>
+        <a href="#">근로복지공단</a>
+        <a href="#">정부24</a>
+        <a href="#">위기상황 생활안전정보</a>
+        <a href="#">경매정보</a>
+      </div>
+      <div class="footer-dropdowns">
+        <select>
+          <option>부서/사업소</option>
+        </select>
+        <select>
+          <option>읍면동</option>
+        </select>
+        <select>
+          <option>유관기관</option>
+        </select>
+        <select>
+          <option>도/시/자치단체</option>
+        </select>
+        <select>
+          <option>김해시청</option>
+        </select>
+      </div>
+      <div class="footer-info-area">
+        <div class="links">
+          <a href="#">개인정보처리방침</a>
+          <a href="#">저작권정책</a>
+          <a href="#">누리집이용안내</a>
+          <a href="#">찾아오시는길</a>
+          <a href="#">주차장안내</a>
+          <a href="#">직원연락처(팩스포함)</a>
+        </div>
+
+        <p class="address">
+          50924 경상남도 김해시 김해대로 2491(부원동) 김해시청 관광진흥과<br />
+          문의전화 : 1577-9400(유료), 055-330-3114(유료)
+        </p>
+        <p class="working-hours">
+          ※ 민원콜센터 운영시간: 평일(09:00~18:00), 토/일요일, 공휴일 및
+          근무시간 외에는 상담되지 않습니다.
+        </p>
+        <p class="copyright">Copyright(C) Gimhae City. All Rights Reserved.</p>
+        <p class="copyright">
+          https://www.gimhae.go.kr/tour.web 김해시 관광포털 클론코딩 연습
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -1,0 +1,37 @@
+#main-contianer {
+  display: flex;
+}
+
+#carousel-warpper {
+  display: flex;
+}
+#main-warpper {
+  overflow: hidden;
+}
+
+#main-prev {
+  position: absolute;
+  margin-top: 410px;
+  margin-left: 5%;
+}
+#main-next {
+  position: absolute;
+  margin-top: 410px;
+  margin-left: 95%;
+}
+
+#food-intro {
+  margin-top: 50px;
+  height: 600px;
+  background-image: url("https://www.gimhae.go.kr/_res/tour/img/main/bg4.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.food-page {
+  display: flex;
+  padding-top: 150px;
+  margin-left: 25%;
+}
+.card {
+  margin: 10px;
+}
