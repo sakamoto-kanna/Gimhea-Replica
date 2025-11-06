@@ -23,3 +23,18 @@ async function apiLoad(reqeustURL) {
 
   console.log(dataArr);
 }
+
+function randomIdx(count, max) {
+  let randArr = [];
+  for (let i = 0; i < count; i++) {
+    const rand = Math.floor(Math.random() * max);
+    randArr[i] = rand;
+    for (let j = 0; j < i; j++) {
+      if (randArr[j] === rand) {
+        i--;
+        break;
+      }
+    }
+  }
+  console.log(randArr);
+}
