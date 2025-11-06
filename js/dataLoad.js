@@ -21,6 +21,7 @@ async function apiLoad(reqeustURL) {
     dataArr = dataArr.concat(data.results);
   }
 
+  randomIdx(12, dataLength);
   console.log(dataArr);
 }
 
