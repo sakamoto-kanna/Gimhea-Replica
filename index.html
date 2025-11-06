@@ -125,26 +125,50 @@
       </div>
     </header>
     <main id="main-contianer">
-      <div id="carousel-warpper">
-        <img
-        src="https://www.gimhae.go.kr/_res/tour/img/main/vpr1/v20250103_01.jpg"
-        alt=""
-        />
-        <img
-        src="https://www.gimhae.go.kr/_res/tour/img/main/vpr1/v20250103_02.jpg"
-        alt=""
-        />
-        <img
-        src="https://www.gimhae.go.kr/_res/tour/img/main/vpr1/v20250103_03.jpg"
-        alt=""
-        />
-      </div>
-      <img id="main-prev" src="https://nextit.or.kr:48080/images/prev-btn.png" onclick="mainPrev()"></img>
-      <img id="main-next" src="https://nextit.or.kr:48080/images/next-btn.png" onclick="mainNext()"></img>
       <div id="main-warpper">
+        <div id="carousel-warpper">
+          <img
+          src="https://www.gimhae.go.kr/_res/tour/img/main/vpr1/v20250103_01.jpg"
+          alt=""
+          />
+          <img
+          src="https://www.gimhae.go.kr/_res/tour/img/main/vpr1/v20250103_02.jpg"
+          alt=""
+          />
+          <img
+          src="https://www.gimhae.go.kr/_res/tour/img/main/vpr1/v20250103_03.jpg"
+          alt=""
+          />
+        </div>
+        <img id="main-prev" src="https://nextit.or.kr:48080/images/prev-btn.png" onclick="mainPrev()"></img>
+        <img id="main-next" src="https://nextit.or.kr:48080/images/next-btn.png" onclick="mainNext()"></img>
+        <div id="main-warpper">
+        </div>
+
       </div>
       <div id="food-intro">
-        <div class="food-page"></div>
+        
+          <h1 >김해의 '맛'에 빠지다!</h1>
+        
+        <img id="food-prev" src="https://nextit.or.kr:48080/images/prev-btn.png" onclick="foodPrev()"></img>
+        <img id="food-next" src="https://nextit.or.kr:48080/images/next-btn.png" onclick="foodNext()"></img>
+        <div class="food-page"> 
+          <div id="food-carousel">
+            <div class="card" id="card-1">... </div>
+            <div class="card" id="card-2">... </div>
+            <div class="card" id="card-3">... </div>
+            <div class="card" id="card-4">... </div>
+            <div class="card" id="card-1">... </div>
+            <div class="card" id="card-2">... </div>
+            <div class="card" id="card-3">... </div>
+            <div class="card" id="card-4">... </div>
+            <div class="card" id="card-1">... </div>
+            <div class="card" id="card-2">... </div>
+            <div class="card" id="card-3">... </div>
+            <div class="card" id="card-4">... </div>
+
+          </div>
+        </div>
       </div>
     </main>
 
@@ -200,9 +224,10 @@
       </div>
     </footer>
     <script src="js/carousel.js"></script>
-    <script>
+    <script src="js/dataLoad.js"></script>
+    <script> 
       window.onload = () => {
-        mainCycle();
+        carouselCycle();
       }
     </script>
   </body>

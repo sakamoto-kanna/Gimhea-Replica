@@ -1,5 +1,4 @@
 #main-contianer {
-  display: flex;
 }
 
 #carousel-warpper {
@@ -31,9 +30,36 @@
 }
 .food-page {
   display: flex;
-  padding-top: 150px;
-  margin-left: 25%;
+  padding-top: 80 px;
+  margin-left: 28%;
+  width: 880px;
+  overflow: hidden;
 }
 .card {
+  height: 250px;
+  width: 200px;
+  background-color: aqua;
+  display: block;
   margin: 10px;
+}
+
+#food-carousel {
+  display: flex;
+  transition: transform 0.8s ease;
+}
+
+#food-prev {
+  position: absolute;
+  margin-top: 180px;
+  margin-left: 23%;
+}
+#food-next {
+  position: absolute;
+  margin-top: 180px;
+  margin-left: 76%;
+}
+h1 {
+  padding-top: 50px;
+  text-align: center;
+  color: white;
 }
