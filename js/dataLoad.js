@@ -5,12 +5,21 @@ async function fetchDataLoad(url) {
   }
   return await response.json();
 }
-
-async function apiLoad(size, requestUrl) {
+let dataArr = [];
+async function apiLoad(reqeustURL) {
   const proxy = "https://nextit.or.kr:41080/";
-  for (let i = 1; i < size; i++) {
+  let origin = `${reqeustURL}?page=1`;
+  const url = `${proxy}${origin}`;
+  //   console.log(url);
+
+  const data = await fetchDataLoad(url);
+  const dataLength = data.page_count;
+  for (let i = 1; i < dataLength + 1; i++) {
     const origin = `${reqeustURL}?page=${i}`;
     const url = `${proxy}${origin}`;
-    //console.log(url);
+    const data = await fetchDataLoad(url);
+    dataArr = dataArr.concat(data.results);
   }
+
+  console.log(dataArr);
 }
