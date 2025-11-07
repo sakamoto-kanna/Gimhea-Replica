@@ -70,8 +70,12 @@
   margin-top: 180px;
   margin-left: 76%;
 }
-h1 {
+#food-intro h1 {
   padding-top: 50px;
   text-align: center;
   color: white;
+}
+
+#tour-page h1 {
+  text-align: center;
 }
