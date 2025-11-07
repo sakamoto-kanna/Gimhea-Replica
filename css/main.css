@@ -36,7 +36,7 @@
   overflow: hidden;
 }
 .food-card {
-  height: 250px;
+  height: 270px;
   width: 200px;
   background-color: white;
   box-shadow: 5px 5px 5px rgba(165, 165, 165, 0.327);
@@ -49,6 +49,10 @@
   height: 125px;
   background-color: white;
   display: block;
+}
+
+.food-card p {
+  font-size: 12px;
 }
 
 #food-carousel {

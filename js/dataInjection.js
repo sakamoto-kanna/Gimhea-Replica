@@ -4,12 +4,12 @@ function dataInjection(className, inputClass, data) {
 
   for (let i = 0; i < 12; i++) {
     const jsonData = {
-      name: `"${data[randArr[i]].name}"`,
-      image: `"${data[randArr[i]].images[0]}"`,
-      memu: `"${data[randArr[i]].menuprice}"`,
-      address: `"${data[randArr[i]].address}"`,
+      name: `${data[randArr[i]].name}`,
+      image: `${data[randArr[i]].images[0]}`,
+      memu: `${data[randArr[i]].menuprice}`,
+      address: `${data[randArr[i]].address}`,
     };
-    area.innerHTML += `<div class=${inputClass}><img src=${jsonData.image}></div>`;
+    area.innerHTML += `<div class=${inputClass}><img src=${jsonData.image}><p>${jsonData.name}</p><br><p>${jsonData.memu}</p><br><p>${jsonData.address}</p></div>`;
     console.log(jsonData);
   }
 }
