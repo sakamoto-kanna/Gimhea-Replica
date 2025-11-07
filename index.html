@@ -154,25 +154,14 @@
         <img id="food-next" src="https://nextit.or.kr:48080/images/next-btn.png" onclick="foodNext()"></img>
         <div class="food-page"> 
           <div id="food-carousel">
-            <div class="card" id="card-1">... </div>
-            <div class="card" id="card-2">... </div>
-            <div class="card" id="card-3">... </div>
-            <div class="card" id="card-4">... </div>
-            <div class="card" id="card-5">... </div>
-            <div class="card" id="card-6">... </div>
-            <div class="card" id="card-7">... </div>
-            <div class="card" id="card-8">... </div>
-            <div class="card" id="card-9">... </div>
-            <div class="card" id="card-10">... </div>
-            <div class="card" id="card-11">... </div>
-            <div class="card" id="card-12">... </div>
+            
 
           </div>
         </div>
-      </div>
+      </div>  
     </main>
 
-    <footer class="footer">
+    <footer class="footer"> 
       <div class="footer-memu">
         <a href="#">정책정보 모음</a>
         <a href="#">삶의 질을 추구하는 국제슬로시티 김해</a>
@@ -225,10 +214,16 @@
     </footer>
     <script src="js/carousel.js"></script>
     <script src="js/dataLoad.js"></script>
+    <script src="js/dataInjection.js"></script>
     <script> 
-      window.onload = () => {
-        carouselCycle();
-        apiLoad("http://www.gimhae.go.kr/openapi/tour/restaurant.do");
+        
+        window.onload = async () => {
+          carouselCycle();
+          
+          let foodArr = [];
+          foodArr = foodArr.concat(await apiLoad("http://www.gimhae.go.kr/openapi/tour/restaurant.do"));
+          console.log(foodArr);
+          dataInjection("food-carousel","food-card",foodArr);
         
       }
     </script>

@@ -5,37 +5,35 @@ async function fetchDataLoad(url) {
   }
   return await response.json();
 }
-let dataArr = [];
 async function apiLoad(reqeustURL) {
+  let dataArr = [];
   const proxy = "https://nextit.or.kr:41080/";
   let origin = `${reqeustURL}?page=1`;
   const url = `${proxy}${origin}`;
   //   console.log(url);
 
-  const data = await fetchDataLoad(url);
-  const dataLength = data.page_count;
-  for (let i = 1; i < dataLength + 1; i++) {
+  const ROWdata = await fetchDataLoad(url);
+  for (let i = 1; i < ROWdata.page_count + 1; i++) {
     const origin = `${reqeustURL}?page=${i}`;
     const url = `${proxy}${origin}`;
     const data = await fetchDataLoad(url);
+
     dataArr = dataArr.concat(data.results);
   }
 
-  randomIdx(12, dataLength);
-  console.log(dataArr);
-}
-
-function randomIdx(count, max) {
-  let randArr = [];
-  for (let i = 0; i < count; i++) {
-    const rand = Math.floor(Math.random() * max);
-    randArr[i] = rand;
-    for (let j = 0; j < i; j++) {
-      if (randArr[j] === rand) {
-        i--;
-        break;
-      }
+  // console.log(dataArr);
+  let filterData = [];
+  for (let i = 0; i < dataArr.length; i++) {
+    if (
+      dataArr[i].images.length != 0 &&
+      dataArr[i].images.length != null &&
+      dataArr[i].menuprice != ""
+    ) {
+      filterData = filterData.concat(dataArr[i]);
     }
   }
-  console.log(randArr);
+
+  // console.log(filterData);
+
+  return filterData;
 }
