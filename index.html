@@ -161,7 +161,19 @@
       </div>  
       <div id="tour-page">
         <h1>힐링 되는 색다른 여행지</h1>
+        <div id="tour-warpper">
+          <div id="tour-carousel">
+            
+          </div>
+        </div>
+        <br>
+        <div class="tour-button">
+          <img id="tour-prev" src="https://nextit.or.kr:48080/images/prev-btn.png" onclick="tourPrev()"></img>
+          <img id="tour-next" src="https://nextit.or.kr:48080/images/next-btn.png" onclick="tourNext()"></img>
+        </div>
       </div>
+      
+
     </main>
 
     <footer class="footer"> 
@@ -224,10 +236,13 @@
           carouselCycle();
           
           let foodArr = [];
-          foodArr = foodArr.concat(await apiLoad("http://www.gimhae.go.kr/openapi/tour/restaurant.do"));
-          console.log(foodArr);
-          dataInjection("food-carousel","food-card",foodArr);
-        
+          foodArr = foodArr.concat(await foodApiLoad("http://www.gimhae.go.kr/openapi/tour/restaurant.do"));
+          // console.log(foodArr);
+          dataInjectionFood("food-carousel","food-card",foodArr);
+          let tourArr = [];
+          tourArr = tourArr.concat(await tourApiLoad("http://www.gimhae.go.kr/openapi/tour/tourinfo.do"));
+          // console.log(tourArr);
+          dataInjectionTour("tour-carousel","tour-card",tourArr);
       }
     </script>
   </body>

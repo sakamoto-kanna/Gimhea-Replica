@@ -24,6 +24,7 @@ function mainNext() {
 const carouselCycle = () => {
   setInterval(mainNext, 5000);
   setInterval(foodNext, 5000);
+  setInterval(tourNext, 5000);
 };
 
 const foodWapperSize = 880;
@@ -48,4 +49,28 @@ function foodNext() {
   }
   foodIdx++;
   foodCarousel(foodIdx);
+}
+
+const tourWapperSize = 960;
+let tourIdx = 0;
+const tourCountIdx = 3;
+
+function tourCarousel(step) {
+  const tour = document.getElementById("tour-carousel");
+  tour.style.transform = `translate3d(-${tourWapperSize * step}px,0,0)`;
+}
+
+function tourPrev() {
+  if (tourIdx - 1 === -1) {
+    tourIdx = tourCountIdx;
+  }
+  tourIdx--;
+  tourCarousel(tourIdx);
+}
+function tourNext() {
+  if (tourIdx + 1 === tourCountIdx) {
+    tourIdx = -1;
+  }
+  tourIdx++;
+  tourCarousel(tourIdx);
 }

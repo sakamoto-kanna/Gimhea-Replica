@@ -5,7 +5,7 @@ async function fetchDataLoad(url) {
   }
   return await response.json();
 }
-async function apiLoad(reqeustURL) {
+async function foodApiLoad(reqeustURL) {
   let dataArr = [];
   const proxy = "https://nextit.or.kr:41080/";
   let origin = `${reqeustURL}?page=1`;
@@ -35,5 +35,36 @@ async function apiLoad(reqeustURL) {
 
   // console.log(filterData);
 
+  return filterData;
+}
+
+async function tourApiLoad(reqeustURL) {
+  let dataArr = [];
+  const proxy = "https://nextit.or.kr:41080/";
+  let origin = `${reqeustURL}?page=1`;
+  const url = `${proxy}${origin}`;
+
+  const ROWdata = await fetchDataLoad(url);
+  // console.log(ROWdata);
+
+  for (let i = 1; i < ROWdata.page_count + 1; i++) {
+    const origin = `${reqeustURL}?page=${i}`;
+    const url = `${proxy}${origin}`;
+    const data = await fetchDataLoad(url);
+
+    dataArr = dataArr.concat(data.results);
+  }
+
+  let filterData = [];
+  for (let i = 0; i < dataArr.length; i++) {
+    if (
+      dataArr[i].images.length != 0 &&
+      dataArr[i].images.length != null &&
+      dataArr[i].copy != ""
+    ) {
+      filterData = filterData.concat(dataArr[i]);
+    }
+  }
+  // console.log(filterData);
   return filterData;
 }

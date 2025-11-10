@@ -31,7 +31,7 @@
 .food-page {
   display: flex;
   padding-top: 80px;
-  margin-left: 28%;
+  margin-left: 26%;
   width: 880px;
   overflow: hidden;
 }
@@ -63,19 +63,54 @@
 #food-prev {
   position: absolute;
   margin-top: 180px;
-  margin-left: 23%;
+  margin-left: 20%;
 }
 #food-next {
   position: absolute;
   margin-top: 180px;
-  margin-left: 76%;
+  margin-left: 75%;
 }
 #food-intro h1 {
   padding-top: 50px;
   text-align: center;
   color: white;
 }
-
+#tour-page {
+  margin: 10px auto;
+}
 #tour-page h1 {
   text-align: center;
+}
+#tour-carousel {
+  display: flex;
+  transition: transform 0.8s ease;
+}
+
+#tour-warpper {
+  width: 960px;
+  display: flex;
+  margin-left: 25%;
+  overflow: hidden;
+}
+.tour-card {
+  width: 300px;
+  height: 320px;
+  background-color: white;
+  margin: auto 10px;
+  box-shadow: 5px 5px 5px rgba(165, 165, 165, 0.327);
+}
+.tour-card img {
+  width: 300px;
+  height: 200px;
+}
+
+.tour-button {
+  display: flex;
+}
+#tour-prev {
+  margin-left: 30%;
+}
+
+#tour-next {
+  margin-left: 35%;
 }
